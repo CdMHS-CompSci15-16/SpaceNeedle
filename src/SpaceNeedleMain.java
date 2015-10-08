@@ -58,11 +58,20 @@ public class SpaceNeedleMain {
 			}
 			System.out.println("||");
 		}
-		for (int i=1;i<=SPACE_NEEDLE_SCALE*4;i++){
-			for (int j=1;j<=SPACE_NEEDLE_SCALE*3-3;j++){
+		for (int i=1;i<=SPACE_NEEDLE_SCALE*SPACE_NEEDLE_SCALE;i++){
+			for (int j=1;j<=SPACE_NEEDLE_SCALE*3-(SPACE_NEEDLE_SCALE-1);j++){
 				System.out.print(" ");
 			}
-			System.out.println("|%%||%%|");
+			System.out.print("|");
+			for (int j=1;j<=SPACE_NEEDLE_SCALE-2;j++){
+				System.out.print("%");
+			}
+			System.out.print("||");
+			for (int j=1;j<=SPACE_NEEDLE_SCALE-2;j++){
+				System.out.print("%");
+			}
+			System.out.println("|");
 		}
+
 	}
 }
